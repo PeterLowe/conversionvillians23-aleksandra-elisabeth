@@ -50,10 +50,10 @@ char printMenu()
 	std::cout << "[B]		Centimeters	<--->		Feet & Inches	[b]" << std::endl;
 	std::cout << "[C]		Litres		<--->		Gallons		[c]" << std::endl;
 	std::cout << "[Q]		Exit		[---]		Exit		[q]" << std::endl;
-	std::cout << "[D] Mpg    <--->    L/100km [d]" << std::endl;
-	std::cout << "[E] Kilograms    <--->    Stone & Pounds [e]" << std::endl;
-	std::cout << "[F] Celsius    <--->    Fahrenheit [f]" << std::endl;
-	std::cout << "[Q] Exit    <--->    Exit [q]" << std::endl;
+	std::cout << "[D]		Mpg		<--->		L/100km		[d]" << std::endl;
+	std::cout << "[E]		Kilograms	<--->		Stone & Pounds	[e]" << std::endl;
+	std::cout << "[F]		Celsius		<--->		Fahrenheit	[f]" << std::endl;
+	std::cout << "[Q]		Exit		<--->		Exit		[q]" << std::endl;
 	std::cout << "Enter your choice: ";
 
 	std::cin >> userChoice;
@@ -67,7 +67,7 @@ void degreesToRadians() // user inputs degrees, that gets converted to radians.
 	float radians = 0;
 	std::cout << "Enter the amount of degrees: ";
 	std::cin >> degrees;
-	
+
 	radians = degrees * (PI / 180); // calculates the radian value
 
 	std::cout << "The value " << degrees << " degrees is equal to " << radians << " radians." << std::endl; // the result
@@ -98,7 +98,7 @@ void centimetersToFeetAndInches()
 
 	std::cout << "Enter the amount of centimeters: ";
 	std::cin >> centimeters;
-	
+
 	feet = centimeters * (3.28084 / 100);
 	inches = ((centimeters * (3.28084 / 100)) - feet) * 12;
 
@@ -112,7 +112,7 @@ void stoneAndPoundsToKilograms()
 	float kilograms = 0.0f;
 
 	// user input
-	std::cout << "Enter in the amount of stone/pounds:";
+	std::cout << "Enter in the amount of stone/pounds: ";
 	std::cin >> stoneAndPounds;
 
 	// converting stone and pounds to kilograms

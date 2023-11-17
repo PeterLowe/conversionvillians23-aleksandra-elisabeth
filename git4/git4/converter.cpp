@@ -1,4 +1,5 @@
 // Elisabeth Sykorova
+// Aleksandra Skarzycka
 
 #include<iostream>
 #include<string>

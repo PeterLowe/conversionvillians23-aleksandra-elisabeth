@@ -48,5 +48,5 @@ void degreesToRadians() // user inputs degrees, that gets converted to radians.
 	
 	radians = degrees * (PI / 180); // calculates the radian value
 
-	std::cout << "The value " << degrees << " degrees is equal to " << radians << " radians." << std::endl;
+	std::cout << "The value " << degrees << " degrees is equal to " << radians << " radians." << std::endl; // the result
 }

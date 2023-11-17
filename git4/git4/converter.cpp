@@ -14,6 +14,8 @@ void centimetersToFeetAndInches();
 
 void stoneAndPoundsToKilograms();
 
+void litresKmToMpg();
+
 int main()
 {
 	char userChoice = ' ';
@@ -37,6 +39,11 @@ int main()
 	if (userChoice == 'e')
 	{
 		stoneAndPoundsToKilograms();
+	}
+
+	if (userChoice == 'd') 
+	{
+		litresKmToMpg();
 	}
 
 	return 1;
@@ -121,5 +128,22 @@ void stoneAndPoundsToKilograms()
 	// displaying the conversion
 	std::cout << "The stone/pounds converts to " << kilograms << " kilograms.";
 
+}
+
+void litresKmToMpg()
+{
+	// variabled
+	float litrePer100km = 0.0f;
+	float mpg = 0.0f;
+
+	// user input
+	std::cout << "What is the Litres per 100km?";
+	std::cin >> litrePer100km;
+
+	// converting L/100km to Mpg
+	mpg = litrePer100km / 282.48f;
+
+	// displaying the conversion
+	std::cout << "The Litres per 100km converts to " << mpg << " Miles Per Gallon.";
 }
 

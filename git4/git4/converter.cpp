@@ -10,6 +10,7 @@ void degreesToRadians();
 
 void fahrenheitToCelsius();
 
+void stoneAndPoundsToKilograms();
 
 int main()
 {
@@ -24,6 +25,11 @@ int main()
 	if (userChoice == 'f')
 	{
 		fahrenheitToCelsius();
+	}
+
+	if (userChoice == 'e')
+	{
+		stoneAndPoundsToKilograms();
 	}
 
 	return 1;
@@ -75,5 +81,22 @@ void fahrenheitToCelsius()
 
 	// displaying the conversion
 	std::cout << "The fahrenheit converts to " << celsius << " Celsius.";
+}
+
+void stoneAndPoundsToKilograms()
+{
+	// variables
+	float stoneAndPounds = 0.0f;
+	float kilograms = 0.0f;
+
+	// user input
+	std::cout << "Enter in the amount of stone/pounds:";
+	std::cin >> stoneAndPounds;
+
+	// converting stone and pounds to kilograms
+	kilograms = stoneAndPounds / 2.2f;
+
+	// displaying the conversion
+	std::cout << "The stone/pounds converts to " << kilograms << " kilograms.";
 
 }

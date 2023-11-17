@@ -5,11 +5,18 @@
 #include<string>
 
 char printMenu();
+void degreesToRadians();
 
 int main()
 {
-	char choice = ' ';
-	choice = printMenu();
+	char userChoice = ' ';
+	userChoice = printMenu();
+
+	if (userChoice == 'A')
+	{
+		degreesToRadians();
+	}
+
 	return 1;
 }
 
@@ -29,4 +36,17 @@ char printMenu()
 
 	std::cin >> choice;
 	return choice;
+}
+
+void degreesToRadians() // user inputs degrees, that gets converted to radians.
+{
+	const float PI = 3.14;
+	float degrees = 0;
+	float radians = 0;
+	std::cout << "Enter the amount of degrees: ";
+	std::cin >> degrees;
+	
+	radians = degrees * (PI / 180); // calculates the radian value
+
+	std::cout << "The value " << degrees << " degrees is equal to " << radians << " radians." << std::endl;
 }

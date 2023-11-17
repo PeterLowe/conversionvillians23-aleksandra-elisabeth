@@ -16,6 +16,9 @@ void stoneAndPoundsToKilograms();
 
 void litresKmToMpg();
 
+void litresToGallons();
+
+
 int main()
 {
 	char userChoice = ' ';
@@ -29,6 +32,11 @@ int main()
 	if (userChoice == 'B')
 	{
 		centimetersToFeetAndInches();
+	}
+
+	if (userChoice == 'C')
+	{
+		litresToGallons();
 	}
 
 	if (userChoice == 'f')
@@ -104,10 +112,10 @@ void centimetersToFeetAndInches()
 	float inches = 0.0f;
 
 	std::cout << "Enter the amount of centimeters: ";
-	std::cin >> centimeters;
+	std::cin >> centimeters; // user input for centimeters
 
-	feet = centimeters * (3.28084 / 100);
-	inches = ((centimeters * (3.28084 / 100)) - feet) * 12;
+	feet = centimeters * (3.28084 / 100); // calculates the feet (int cuts off any decimals that go into inches)
+	inches = ((centimeters * (3.28084 / 100)) - feet) * 12; // calculates the inches remaining
 
 	std::cout << "The entered value is equal to " << feet << " feet and " << inches << " inches." << std::endl;
 }
@@ -147,3 +155,15 @@ void litresKmToMpg()
 	std::cout << "The Litres per 100km converts to " << mpg << " Miles Per Gallon.";
 }
 
+void litresToGallons()
+{
+	float litres = 0;
+	float gallons = 0;
+
+	std::cout << "Enter the value in litres: ";
+	std::cin >> litres;
+
+	gallons = litres * 0.264172;
+
+	std::cout << "The value of " << litres << " litres is equal to " << gallons << " gallons." << std::endl;
+}

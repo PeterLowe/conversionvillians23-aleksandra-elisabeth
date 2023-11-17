@@ -10,6 +10,8 @@ void degreesToRadians();
 
 void fahrenheitToCelsius();
 
+void centimetersToFeetAndInches();
+
 
 int main()
 {
@@ -19,6 +21,11 @@ int main()
 	if (userChoice == 'A')
 	{
 		degreesToRadians();
+	}
+
+	if (userChoice == 'B')
+	{
+		centimetersToFeetAndInches();
 	}
 
 	if (userChoice == 'f')
@@ -76,4 +83,19 @@ void fahrenheitToCelsius()
 	// displaying the conversion
 	std::cout << "The fahrenheit converts to " << celsius << " Celsius.";
 
+}
+
+void centimetersToFeetAndInches()
+{
+	float centimeters = 0.0f;
+	int feet = 0;
+	float inches = 0.0f;
+
+	std::cout << "Enter the amount of centimeters: ";
+	std::cin >> centimeters;
+	
+	feet = centimeters * (3.28084 / 100);
+	inches = ((centimeters * (3.28084 / 100)) - feet) * 12;
+
+	std::cout << "The entered value is equal to " << feet << " feet and " << inches << " inches." << std::endl;
 }

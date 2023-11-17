@@ -18,6 +18,8 @@ void litresKmToMpg();
 
 void litresToGallons();
 
+void radiansToDegrees();
+
 
 int main()
 {
@@ -54,6 +56,11 @@ int main()
 		litresKmToMpg();
 	}
 
+	if (userChoice == 'a')
+	{
+		radiansToDegrees();
+	}
+
 	return 1;
 }
 
@@ -77,9 +84,9 @@ char printMenu()
 
 void degreesToRadians() // user inputs degrees, that gets converted to radians.
 {
-	const float PI = 3.14;
-	float degrees = 0;
-	float radians = 0;
+	const float PI = 3.14f;
+	float degrees = 0.0f;
+	float radians = 0.0f;
 	std::cout << "Enter the amount of degrees: ";
 	std::cin >> degrees;
 
@@ -99,7 +106,7 @@ void fahrenheitToCelsius()
 	std::cin >> fahrenheit;
 
 	// converting fahrenheit to celsius
-	celsius = (fahrenheit - 32) * (5.0) / 9;
+	celsius = (fahrenheit - 32) * (5.0f) / 9;
 
 	// displaying the conversion
 	std::cout << "The fahrenheit converts to " << celsius << " Celsius.";
@@ -114,8 +121,8 @@ void centimetersToFeetAndInches()
 	std::cout << "Enter the amount of centimeters: ";
 	std::cin >> centimeters; // user input for centimeters
 
-	feet = centimeters * (3.28084 / 100); // calculates the feet (int cuts off any decimals that go into inches)
-	inches = ((centimeters * (3.28084 / 100)) - feet) * 12; // calculates the inches remaining
+	feet = centimeters * (3.28084f / 100); // calculates the feet (int cuts off any decimals that go into inches)
+	inches = ((centimeters * (3.28084f / 100)) - feet) * 12; // calculates the inches remaining
 
 	std::cout << "The entered value is equal to " << feet << " feet and " << inches << " inches." << std::endl;
 }
@@ -157,13 +164,31 @@ void litresKmToMpg()
 
 void litresToGallons()
 {
-	float litres = 0;
-	float gallons = 0;
+	float litres = 0.0f;
+	float gallons = 0.0f;
 
 	std::cout << "Enter the value in litres: ";
 	std::cin >> litres;
 
-	gallons = litres * 0.264172;
+	gallons = litres * 0.264172f;
 
 	std::cout << "The value of " << litres << " litres is equal to " << gallons << " gallons." << std::endl;
+}
+
+void radiansToDegrees()
+{
+	// variables
+	const float PI = 3.14f;
+	float degrees = 0.0f;
+	float radians = 0.0f;
+
+	// user input
+	std::cout << "Enter in the amount of radians:";
+	std::cin >> radians;
+
+	// converting radians to degrees
+	degrees = radians * (180 / PI);
+
+	// displaying the conversion
+	std::cout << "The radians conver to " << degrees << " degrees.";
 }

@@ -20,6 +20,9 @@ void litresToGallons();
 
 void radiansToDegrees();
 
+void mpgToLitresKm();
+
+
 
 int main()
 {
@@ -41,6 +44,16 @@ int main()
 		litresToGallons();
 	}
 
+	if (userChoice == 'D')
+	{
+		mpgToLitresKm();
+	}
+
+	if (userChoice == 'd')
+	{
+		litresKmToMpg();
+	}
+
 	if (userChoice == 'f')
 	{
 		fahrenheitToCelsius();
@@ -49,11 +62,6 @@ int main()
 	if (userChoice == 'e')
 	{
 		stoneAndPoundsToKilograms();
-	}
-
-	if (userChoice == 'd') 
-	{
-		litresKmToMpg();
 	}
 
 	if (userChoice == 'a')
@@ -172,6 +180,9 @@ void litresToGallons()
 
 	gallons = litres * 0.264172f;
 
+	gallons = litres * 0.264172; // calculates the gallons from the litres value
+
+
 	std::cout << "The value of " << litres << " litres is equal to " << gallons << " gallons." << std::endl;
 }
 
@@ -191,4 +202,18 @@ void radiansToDegrees()
 
 	// displaying the conversion
 	std::cout << "The radians conver to " << degrees << " degrees.";
+}
+
+void mpgToLitresKm()
+{
+	float mpg = 0.0f;
+	float litresPer100km = 0.0f;
+
+	std::cout << "Enter the value in mpg: ";
+	std::cin >> mpg;
+
+	litresPer100km = 235.214583 / mpg;
+
+	std::cout << "The value in litres per 100 km is equal to: " << litresPer100km << std::endl;
+
 }
